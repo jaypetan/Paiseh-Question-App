@@ -1,5 +1,5 @@
 # Paiseh Questions-Website and App
-## A questionnaire consisting of a website and android application using HTML, CSS, JavaScript, Android Studio and MySQL
+### A questionnaire consisting of a website and android application using HTML, CSS, JavaScript, Android Studio and MySQL
 ### Website: 
 ### Consist of Homepage, Display of Questions, Statistics
 -Homepage: Start button to initiate the quiz
