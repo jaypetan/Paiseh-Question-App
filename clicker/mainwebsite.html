@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scaled=1.0">
+	<title>Quiz Webiste</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="main">
+		<header class="header">
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="logo">HUH?</a>
+
+			<nav class="navbar">
+				<a href="http://localhost:9999/clicker/mainwebsite.html">Home</a>
+				<form style="border: none; margin: 0; padding: 0;" method="GET" action="display">
+					<input type="submit" value="Statistics">
+				</form>
+				<a href="https://res.cloudinary.com/practicaldev/image/fetch/s--cKzLKPo7--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6uisb0baih0a8y5piqj7.gif">About</a>
+			</nav>
+		</header>
+
+		<div class="container">
+			
+			<section class="quiz-section">
+				<div class="quiz-box">
+					<h1>Questionnaire</h1>
+
+					<h2 class="question-text">Question 1</h2>
+
+					<div class="option-list">
+						<!-- <div class='option'>
+							<span>A. 2</span>
+						</div>
+						<div class='option'>
+							<span>B. 3</span>
+						</div>
+						<div class='option'>
+							<span>C. 4</span>
+						</div>
+						<div class='option'>
+							<span>D. 5</span>
+						</div> -->
+					</div>
+
+					<div class="quiz-footer">
+						<span class="question-total">1 of 5 Questions</span>
+						<form id="continueForm" style="border: none; margin: 0; padding: 0;" action="nextQn" method="POST">
+						    <button type="submit" class="next-btn">NEXT</button>
+						</form>
+					</div>
+				</div>
+
+				<div class="result-box">
+					<h2>End of Quiz!</h2>
+					<div class="buttons">
+						<form id="continueForm2" style="border: none; margin: 0; padding: 0;" action="updateQn" method="POST">
+						    <button type="submit" class="tryAgain-btn">Retry</button>
+						</form>	
+						<button class="goHome-btn">Homepage</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="home">
+				<div class = "home-content">
+					<h1> Paiseh Questions </h1>
+					<p> questions you are too shy to ask </p>
+					<button class="start-btn"> Start </button>
+			</section>
+		</div>
+
+	</main>
+
+	<div class="popup-info">
+		<h2> Guide </h2>
+		<span class="info"> 1. Please connect with your Android device </span>
+		<span class="info"> 2. Website will show the questions  </span>
+		<span class="info"> 3. Use Android device to answer </span>
+
+		<div class="btn-group">
+			<button class="info-btn exit-btn">Exit</button>
+			<form id="continueForm3" style="border: none; margin: 0; padding: 0;" action="updateQn" method="POST">
+			    <button type="submit" class="info-btn continue-btn">Continue</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+	<script src="questions.js"></script>
+
+	<!-- NOTE to beautify when got time 
+		Basically to prevent servlet from going to another page-->
+	<script>
+	document.getElementById('continueForm').addEventListener('submit', function(event) {
+	    event.preventDefault(); // Prevent the default form submission which reloads the page
+	    var form = this;
+
+	    fetch(form.action, {
+	        method: 'POST',
+	        body: new FormData(form)
+	    })
+	    .then(response => response.text()) // Assuming the response is text
+	    .then(html => {
+	        console.log("Server Response:", html);
+	        // Handle response here, e.g., display a message, redirect, etc.
+	    })
+	    .catch(error => {
+	        console.error('Error submitting form:', error);
+	    });
+	});
+
+	document.getElementById('continueForm2').addEventListener('submit', function(event) {
+	    event.preventDefault(); // Prevent the default form submission which reloads the page
+	    var form = this;
+
+	    fetch(form.action, {
+	        method: 'POST',
+	        body: new FormData(form)
+	    })
+	    .then(response => response.text()) // Assuming the response is text
+	    .then(html => {
+	        console.log("Server Response:", html);
+	        // Handle response here, e.g., display a message, redirect, etc.
+	    })
+	    .catch(error => {
+	        console.error('Error submitting form:', error);
+	    });
+	});
+
+	document.getElementById('continueForm3').addEventListener('submit', function(event) {
+	    event.preventDefault(); // Prevent the default form submission which reloads the page
+	    var form = this;
+
+	    fetch(form.action, {
+	        method: 'POST',
+	        body: new FormData(form)
+	    })
+	    .then(response => response.text()) // Assuming the response is text
+	    .then(html => {
+	        console.log("Server Response:", html);
+	        // Handle response here, e.g., display a message, redirect, etc.
+	    })
+	    .catch(error => {
+	        console.error('Error submitting form:', error);
+	    });
+	});
+	</script>
+
+</body>
+</html>

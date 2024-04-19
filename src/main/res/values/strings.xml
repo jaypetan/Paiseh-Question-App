@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ClickerApp</string>
+    <string name="Waiting"> WAITING PAGE </string>
+    <string name="Instruction">CLICK NEXT WHEN NEXT QUESTION APPEARS ON SCREEN</string>
+</resources>

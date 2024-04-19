@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".LoadingPageActivity">
+
+    <TextView
+        android:id="@+id/waitingText"
+        style="@style/textStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Waiting"
+        android:textColor="#BD4AF6"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <WebView
+        android:id="@+id/webView"
+        style="@style/textStyle"
+        android:layout_width="325dp"
+        android:layout_height="556dp"
+        android:layout_below="@id/waitingText"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/instructionText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waitingText" />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/buttonStyle"
+        android:layout_width="220dp"
+        android:layout_height="69dp"
+        android:onClick="btnNextHandler"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionText"
+        app:layout_constraintVertical_bias="0.642" />
+
+    <TextView
+        android:id="@+id/instructionText"
+        style="@style/textStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Instruction"
+        android:textColor="#FFFEFE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webView" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="131dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:fontFamily="sans-serif"
+        android:onClick="btnExitHandler2"
+        android:shadowRadius="2"
+        android:text="Exit"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
