@@ -17,4 +17,5 @@ Consist of Start, Choice of Answer, Loading Screen
 <img width="1457" alt="Questionnaire" src="https://github.com/jaypetan/Paiseh-Question-App/assets/152462664/abd0432f-4447-4ad5-9997-99cd3fb11f7c">
 
 ### Android App interface:
-<img width="1457" alt="Mobile App" src="https://github.com/jaypetan/Paiseh-Question-App/assets/152462664/51aba02c-28ea-42e5-ad97-e6a1688fb880">
+<img width="630" alt="Android App" src="https://github.com/jaypetan/Paiseh-Question-App/assets/152462664/9643f61e-abe9-4d9f-b28e-d129c59c5a1f">
+
