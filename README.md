@@ -1,13 +1,13 @@
 # Paiseh Questions-Website and App
 ### A questionnaire consisting of a website and android application using HTML, CSS, JavaScript, Android Studio and MySQL
 ### Website: 
-### Consist of Homepage, Display of Questions, Statistics
+Consist of Homepage, Display of Questions, Statistics
 -Homepage: Start button to initiate the quiz
 -Display of Question: Displays an array of questions that can be edited
 -Statistics: Shows the number of answers in a bar chart
 
 ### Android App:
-### Consist of Start, Choice of Answer, Loading Screen
+Consist of Start, Choice of Answer, Loading Screen
 -Start: Check if Start on Website has been clicked 
 -Choice of Answer: Will receive data for current question and submit answer
 -Loading Screen: Check if there is change of question on Website
